@@ -54,7 +54,7 @@ export default function Faxsend(){
                     message:"文章を入力してください。"};
                     show(message);
             }else{
-                axios.post("http://localhost:8000/api/faxdoc",body,header)
+                axios.post("http://24.186.229.196:8000/api/faxdoc",body,header)
                 .then(response => {
                     console.log(response.data);
                     if(response.data.data.messages[0].status === "INVALID_RECIPIENT"){
