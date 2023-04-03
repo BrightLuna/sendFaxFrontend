@@ -1,0 +1,14 @@
+.fax-box{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(197, 196, 196);
+    box-shadow: 2px 2px 2px lightgray;
+}
+.small-title{
+    padding: 10px;
+    background-color: rgb(224, 239, 251);
+}
+.print-icon{
+    left:18%;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,23 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './components/Auth/Login';
+import Faxsend from './components/Fax/Faxsend';
+
+//theme
+import "primereact/resources/themes/lara-light-indigo/theme.css";     
+    
+//core
+import "primereact/resources/primereact.min.css";
+
+//icons
+import "primeicons/primeicons.css"; 
+
 
 function App() {
+
+  // if(!token){
+  //   return <Login />
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Faxsend />} />
+          <Route path='/preferences' element={<></>} />
+        </Routes>
+      </BrowserRouter>
+      <div className='footer'>
+        制作者 : 荒木 宮地
+      </div>
     </div>
   );
 }
